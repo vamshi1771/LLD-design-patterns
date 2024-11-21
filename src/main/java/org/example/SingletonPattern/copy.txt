@@ -1,0 +1,44 @@
+
+public class Demo {
+
+    public static void main(String[] args) {
+        LoggerSingleton singletonObj = LoggerSingleton.getInstance();
+        System.out.println(singletonObj);
+
+        LoggerSingleton singletonObj2 = LoggerSingleton.getInstance();
+        System.out.println(singletonObj2);
+    }
+}
+
+public class LoggerSingleton {
+
+    //Eager Loading
+    //private static LoggerSingleton instance = new LoggerSingleton();
+
+    // Lazy Loading
+    private static volatile LoggerSingleton instance = null;
+
+
+    private LoggerSingleton(){
+
+    }
+
+    // Not ThreadSaftey
+//    public static LoggerSingleton getInstance(){
+//        if(instance == null) instance = new LoggerSingleton();
+//        return instance;
+//    }
+
+
+    // ThreadSaftey => Double Checking
+    public static LoggerSingleton getInstance(){
+        if(instance == null){
+            synchronized (LoggerSingleton.class){
+                if(instance == null){
+                    instance = new LoggerSingleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
