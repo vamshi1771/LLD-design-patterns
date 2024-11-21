@@ -1,4 +1,4 @@
-package org.example.AdapterPattern.StrategyDesignPattern;
+package org.example.StrategyDesignPattern;
 
 public class paymentProcessorContext {
      private  paymentStrategy paymentStrategy;
