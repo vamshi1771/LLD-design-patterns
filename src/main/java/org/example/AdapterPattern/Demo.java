@@ -9,5 +9,4 @@ public class Demo {
        List<Student>  list = studentClient.getStudentsList();
         System.out.println(list);
     }
-
 }
