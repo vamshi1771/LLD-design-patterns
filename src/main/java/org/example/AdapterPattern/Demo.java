@@ -6,7 +6,7 @@ public class Demo {
 
     public static void main(String[] arg){
         StudentClient studentClient = new StudentClient();
-       List<Student>  list = studentClient.getStudentsList();
+        List<Student>  list = studentClient.getStudentsList();
         System.out.println(list);
     }
 }
