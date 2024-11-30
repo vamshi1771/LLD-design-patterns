@@ -8,6 +8,5 @@ import java.util.List;
 public class ExactMode implements ExpensesMode {
     @Override
     public void splitAmount(Integer paidBy, Double paidAmount, String ExpenseMode, List<User> paidTo) {
-
     }
 }

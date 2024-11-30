@@ -1,4 +1,13 @@
 package org.example.splitwise.service.serviceImplementation;
 
-public class PercentMode {
+import org.example.splitwise.model.User;
+import org.example.splitwise.service.ExpensesMode;
+
+import java.util.List;
+
+public class PercentMode implements ExpensesMode {
+    @Override
+    public void splitAmount(Integer paidBy, Double paidAmount, String ExpenseMode, List<User> paidTo) {
+
+    }
 }
